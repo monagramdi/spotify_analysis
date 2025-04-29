@@ -12,6 +12,14 @@ Le schéma relationnel repose sur trois tables principales :
 - `albums` : contient les noms d'albums et labels (clé primaire : `album_id`)
 - `tracks` : contient les informations des titres, reliées à leurs artistes et albums (clé primaire : `track_id`) et agit comme liaison entre les tables 'artists' et 'albums'.
 
+Il fallait faire attention ici aux doublons puisque un artiste était associé à plusieurs albums et plusieurs musiques. Dans la table 'tracks', il a alors été nécessaire d'ajouter un 
+
+```sql
+UNIQUE(track_name, artist_id, album_id)
+```
+
+Afin que chaque ligne soit complètement unique : il ne peut pas y avoir un ligne dans la table tracks qui ait le même nom de musique, le même artist_id et le même album_id.
+
 ---
 ## Données
 
