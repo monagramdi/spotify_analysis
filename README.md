@@ -27,6 +27,9 @@ Les données ont été récupérées à l'aide de l'API de Spotify, permettant d
 
 J'ai utilisé un script python afin de pouvoir collecter ces données et les enregistrer dans un fichier csv.
 
+Ces deux premières parties sont dans les fichiers : 
+- spotifybase.py pour le script Python permettant de générer la base de données
+- relational_base.sql pour le script SQL permettant la création de la base de données relationnelle.
 ---
 ## Analyse de données
 
@@ -71,4 +74,4 @@ La première requête crée des catégories par score de popularité (Très faib
 
 La seconde requête compare la moyenne des streamings lorsque la musique a été réalisé en 'featuring' (c'est-à-dire en collaboration avec un.e autre artiste) et sans featuring. Cette requête a été effectué car, souvent, la méthode du featuring est utilisé afin de mettre en lumière certains artistes et de réunir les auditeurs des deux artistes.
 
-
+Ces requêtes se situent dans le fichier : spotify_requests.sql
