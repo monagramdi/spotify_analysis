@@ -79,7 +79,7 @@ La seconde requête compare la moyenne des streamings lorsque la musique a été
 
 Ces requêtes se situent dans le fichier : data_analysis_requests.sql
 
---
+---
 ## Interface Utilisateur
 
 Pour aller plus loin, j'ai décidé de créer une interface utilisateur '__main__' sous Python utilisant également des requêtes SQL.
@@ -88,5 +88,5 @@ Ce code permet de choisir un artiste dans notre base de données et de génerer 
 
 Le code se situe dans le fichier ui_spotify.py.
 
---
+---
 Merci ! 
