@@ -20,6 +20,32 @@ UNIQUE(track_name, artist_id, album_id)
 
 Afin que chaque ligne soit complètement unique : il ne peut pas y avoir un ligne dans la table tracks qui ait le même nom de musique, le même artist_id et le même album_id.
 
+
+erDiagram
+    tracks {
+        int track_id PK
+        string track_name
+        int popularity
+        int streaming
+        string uri
+        int artist_id FK
+        int album_id FK
+    }
+
+    albums {
+        int album_id PK
+        string album_name
+        string label
+    }
+
+    artists {
+        int artist_id PK
+        string artist_name
+    }
+
+    tracks ||--o{ albums : "belongs to"
+    tracks ||--o{ artists : "performed by"
+
 ---
 ## Données
 
