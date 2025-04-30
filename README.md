@@ -29,7 +29,10 @@ J'ai utilisé un script python afin de pouvoir collecter ces données et les enr
 
 Ces deux premières parties sont dans les fichiers : 
 - spotifybase.py pour le script Python permettant de générer la base de données
-- relational_base.sql pour le script SQL permettant la création de la base de données relationnelle.
+- database.csv qui correspond à la base de données créées à l'aide du script python ci-dessus
+- relationaldb_creation.sql pour le script SQL permettant la création de la base de données relationnelle.
+
+Une fois notre base de données relationnelle créée et remplies avec nos données, nous obtenons notre database finale qui se situe dans le fichier data_spotify.db
 ---
 ## Analyse de données
 
@@ -74,4 +77,16 @@ La première requête crée des catégories par score de popularité (Très faib
 
 La seconde requête compare la moyenne des streamings lorsque la musique a été réalisé en 'featuring' (c'est-à-dire en collaboration avec un.e autre artiste) et sans featuring. Cette requête a été effectué car, souvent, la méthode du featuring est utilisé afin de mettre en lumière certains artistes et de réunir les auditeurs des deux artistes.
 
-Ces requêtes se situent dans le fichier : spotify_requests.sql
+Ces requêtes se situent dans le fichier : data_analysis_requests.sql
+
+--
+## Interface Utilisateur
+
+Pour aller plus loin, j'ai décidé de créer une interface utilisateur '__main__' sous Python utilisant également des requêtes SQL.
+
+Ce code permet de choisir un artiste dans notre base de données et de génerer un rapport des statistiques principales de cet artistes (nombre de morceaux dans notre database, nombre d'albums, top 5 des morceaux les plus populaires etc...). Cette amélioration avait pour but de prendre en main l'utilisation de sqlite sous Python.
+
+Le code se situe dans le fichier ui_spotify.py.
+
+--
+Merci ! 
